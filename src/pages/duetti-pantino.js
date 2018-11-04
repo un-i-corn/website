@@ -30,7 +30,7 @@ const Landing = props => (
         </header>
         <div className="content">
           {data['duetti-pantino'].slogan.map(sentence => (
-            <p key={sentence.toBase64}>{sentence}</p>
+            <p key={sentence}>{sentence}</p>
           ))}
         </div>
       </div>
