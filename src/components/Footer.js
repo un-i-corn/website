@@ -8,6 +8,8 @@ const Footer = props => (
           <a
             href="https://twitter.com/UNiCORN_bodoge"
             className="icon alt fa-twitter"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <span className="label">Twitter</span>
           </a>

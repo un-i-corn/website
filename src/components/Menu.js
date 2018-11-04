@@ -24,7 +24,12 @@ const Menu = props => (
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/UNiCORN_bodoge" className="button fit">
+          <a
+            href="https://twitter.com/UNiCORN_bodoge"
+            className="button fit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Twitter
           </a>
         </li>
