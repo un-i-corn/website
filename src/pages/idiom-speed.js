@@ -4,19 +4,33 @@ import Layout from '../components/layout';
 import { graphql } from 'gatsby';
 import data from '../data';
 
-import idiomSpeedPic1 from '../assets/images/Idiom-Speed1.jpg';
-import idiomSpeedPic2 from '../assets/images/Idiom-Speed2.jpg';
-import idiomSpeedPic3 from '../assets/images/Idiom-Speed3.jpg';
+import Img from 'gatsby-image';
 
 export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;
+         fragment fluidImage on File {
+           childImageSharp {
+             fluid(maxWidth: 300) {
+               ...GatsbyImageSharpFluid_withWebp_noBase64
+             }
+           }
+         }
+         query {
+           site {
+             siteMetadata {
+               title
+             }
+           }
+           idiomSpeedPic1: file(relativePath: { eq: "Idiom-Speed1.jpg" }) {
+             ...fluidImage
+           }
+           idiomSpeedPic2: file(relativePath: { eq: "Idiom-Speed2.jpg" }) {
+             ...fluidImage
+           }
+           idiomSpeedPic3: file(relativePath: { eq: "Idiom-Speed3.jpg" }) {
+             ...fluidImage
+           }
+         }
+       `;
 
 const IdiomSpeedLanding = props => (
   <Layout>
@@ -34,7 +48,7 @@ const IdiomSpeedLanding = props => (
         </header>
         <div className="content">
           {data['idiom-speed'].slogan.map(sentence => (
-            <p>{sentence}</p>
+            <p key={sentence.toBase64}>{sentence}</p>
           ))}
         </div>
       </div>
@@ -53,7 +67,11 @@ const IdiomSpeedLanding = props => (
       <section id="spotlight1" className="spotlights">
         <section>
           <div className="image">
-            <img src={idiomSpeedPic1} alt="国語力を高める" />
+            <Img
+              id="idiomSpeedPic1"
+              fluid={props.data.idiomSpeedPic1.childImageSharp.fluid}
+              alt="国語力を高める"
+            />
           </div>
           <div className="content">
             <div className="inner">
@@ -70,7 +88,11 @@ const IdiomSpeedLanding = props => (
         </section>
         <section>
           <div className="image">
-            <img src={idiomSpeedPic2} alt="国語力を高める" />
+            <Img
+              id="idiomSpeedPic2"
+              fluid={props.data.idiomSpeedPic2.childImageSharp.fluid}
+              alt="漢字の選出にAIを使用"
+            />
           </div>
           <div className="content">
             <div className="inner">
@@ -87,7 +109,11 @@ const IdiomSpeedLanding = props => (
         </section>
         <section>
           <div className="image">
-            <img src={idiomSpeedPic3} alt="ルールは簡単" />
+            <Img
+              id="idiomSpeedPic3"
+              fluid={props.data.idiomSpeedPic3.childImageSharp.fluid}
+              alt="ルールは簡単"
+            />
           </div>
           <div className="content">
             <div className="inner">

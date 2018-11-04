@@ -33,7 +33,7 @@ class HomeIndex extends React.Component {
               <header className="major">
                 <h3>{data['duetti-pantino'].title}</h3>
                 {data['duetti-pantino'].slogan.map(sentence => (
-                  <p key={sentence}>{sentence}</p>
+                  <p key={sentence.toBase64}>{sentence}</p>
                 ))}
               </header>
               <Link to="/duetti-pantino" className="link primary" />
@@ -42,7 +42,7 @@ class HomeIndex extends React.Component {
               <header className="major">
                 <h3>{data['idiom-speed'].title}</h3>
                 {data['idiom-speed'].slogan.map(sentence => (
-                  <p key={sentence}>{sentence}</p>
+                  <p key={sentence.toBase64}>{sentence}</p>
                 ))}
               </header>
               <Link to="/idiom-speed" className="link primary" />
