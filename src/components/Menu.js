@@ -7,12 +7,12 @@ const Menu = props => (
     <div className="inner">
       <ul className="links">
         <li>
-          <Link onClick={props.onToggleMenu} to="/">
+          <Link onClick={props.onToggleMenu} to="/idiom-speed">
             熟語スピード
           </Link>
         </li>
         <li>
-          <Link onClick={props.onToggleMenu} to="/">
+          <Link onClick={props.onToggleMenu} to="/duetti-pantino">
             ドゥエッティ・パンティーノ
           </Link>
         </li>
