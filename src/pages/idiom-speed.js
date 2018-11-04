@@ -68,9 +68,10 @@ const IdiomSpeedLanding = props => (
             </div>
           </div>
         </section>
-      </section>
-      <section id="spotlight2" className="spotlights">
         <section>
+          <div className="image">
+            <img src={idiomSpeedPic2} alt="国語力を高める" />
+          </div>
           <div className="content">
             <div className="inner">
               <header className="major">
@@ -83,12 +84,7 @@ const IdiomSpeedLanding = props => (
               </p>
             </div>
           </div>
-          <div className="image">
-            <img src={idiomSpeedPic2} alt="国語力を高める" />
-          </div>
         </section>
-      </section>
-      <section id="spotlight3" className="spotlights">
         <section>
           <div className="image">
             <img src={idiomSpeedPic3} alt="ルールは簡単" />
