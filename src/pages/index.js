@@ -61,6 +61,7 @@ class HomeIndex extends React.Component {
                   <a
                     href="http://gamemarket.jp/booth/gm2729/"
                     className="button next"
+                    target="_blank"
                   >
                     ゲームマーケットの紹介ページへ
                   </a>
