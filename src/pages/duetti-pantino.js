@@ -40,11 +40,11 @@ const Landing = props => (
       <section id="description">
         <div className="inner">
           <header className="major">
-            <h2>COMING SOON ...</h2>
+            <h2>予約受付中</h2>
           </header>
           <p>
-            鋭意製作中 <br />
-            乞うご期待を
+            予約フォームは
+            <a href="https://goo.gl/forms/7rOHpW1myotMnrA53">こちら</a>
           </p>
         </div>
       </section>
